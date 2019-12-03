@@ -268,7 +268,7 @@
       bottom: 0;
       right: 0;
     }
-    /* --------------------------------------Item-------------------------------------- */
+    /* --------------------------------------Item1-------------------------------------- */
     #Item-section{
       width:100%;
       height: 647px;
@@ -277,16 +277,18 @@
       overflow: hidden;
     }
 
-    .Item-title{
+    .Item-Bigtitle{
       height: 45px;
       font-weight: 400;
       color: #555;
       border-bottom: 1px solid #ddd;
     }
 
-    #Showitem{
+    .Showitem{
       width: 100%;
       height: 602.5px;
+
+      position: relative;
     }
 
     #Item1{
@@ -341,6 +343,228 @@
 
     .Itemimgfix:last-child{
       border-width: 1px;
+
+    }
+
+    /* --------------------------------------Item1Article-------------------------------------- */
+    article{
+
+      color: #333333;
+    }
+
+    .itemtitle{
+      font-weight: 400;
+      font-size: 26px;
+
+      margin: 18px 0 10px 0;
+    }
+
+    .description-container{
+      width: 370px;
+      height: 118px;
+    }
+
+    .product-details{
+      font-weight: 400;
+      font-size: 16px;
+
+      line-height: 1.5em;
+    }
+
+    .readmore{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+
+      background-image: url("img/read.png");
+      background-size: cover;
+
+      vertical-align: middle;
+    }
+
+    .left-col{
+      float: left;
+      width: 440px;
+    }
+
+    .right-col{
+      float: right;
+      width: 140px;
+    }
+
+    .right-col-text{
+
+      text-align: center;
+      color: #333333;
+      font-size: 14px;
+      font-weight: bold;
+
+    }
+
+    .right-col-container{
+
+      padding-left: 8px;
+      padding-right: 8px;
+
+      margin: 0px;
+
+      list-style-type: none;
+    }
+
+    .right-col-item{
+      padding: 18px 0;
+
+      border-bottom: 1px solid #ddd;
+    }
+
+    .right-col-item:last-child{
+      border: none;
+    }
+
+    .right-col-item a:link{
+      text-decoration:none;
+      color: #0654BA;
+
+    }
+    .right-col-item a:hover{
+      text-decoration:underline;
+
+    }
+
+    /* --------------------------------------Item2-------------------------------------- */
+
+    .rightsection{
+      position: absolute;
+      right: 0;
+    }
+
+    /* --------------------------------------DailyDeals-------------------------------------- */
+    #dailydeals{
+
+      width: 100%;
+      height: 530px;
+
+      padding-bottom: 75px;
+      border-bottom: 1px solid #ddd;
+
+    }
+
+    .box{
+      width: 100%;
+      height: 300px;
+
+      padding: 25px 0 0 8px;
+
+      vertical-align: middle;
+
+      overflow: hidden;
+
+      border: 1px solid #ddd;
+      background-color: white;
+      border-radius: 2px;
+
+      margin-bottom: 80px;
+    }
+
+    .box-subcontent{
+      float: left;
+
+      width: 190px;
+      margin: 0 24px;
+    }
+
+    .sale{
+      width: 169px;
+
+      border: 1px solid #333333;
+    }
+
+    .details{
+      width: 180px;
+
+      display: inline-block;
+
+      font-size: 14px;
+      padding: 8px 0 0 8px;
+
+      color: black;
+
+      text-decoration: none;
+    }
+
+    .details:hover{
+      text-decoration: underline;
+      color: #0654BA;
+    }
+
+    .price{
+
+      padding: 8px 0 0 8px;
+      margin: 0;
+
+    }
+
+    /* --------------------------------------NextPage-------------------------------------- */
+
+    .NextPage{
+      text-align: center;
+
+    }
+
+    .NextPage-content{
+
+      padding-top: 20px;
+      display: inline-block;
+    }
+
+    .NextPage-content a{
+      color: black;
+      float: left;
+      padding: 8px 16px;
+
+      text-decoration: none;
+
+      transition: background-color 0.3s ;
+
+    }
+
+    .NextPage-content a:hover:not(.active){
+
+      background-color: #ddd;
+
+    }
+
+    .NextPage-content a.active{
+      background-color: #4caf50;
+      color: white;
+    }
+
+    /* --------------------------------------Collections-------------------------------------- */
+
+    #collections{
+      border: 1px solid #ddd;
+      background-color: white;
+      border-radius: 2px;
+      text-align: center;
+      color: #777777;
+      box-sizing: border-box;
+
+    }
+
+    #collections a{
+      color: #0754BA;
+      text-decoration: none;
+    }
+
+    #collections a:hover{
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------Footer-------------------------------------- */
+
+    footer{
+
+      color: #777777;
 
     }
 
@@ -451,9 +675,11 @@
   <section id="Item-section" class="floatfix BGColor">
     <div class="container">
 
-      <h2 class="Item-title">Today's Featured Collections</h2>
+      <h2 class="Item-Bigtitle">Today's Featured Collections</h2>
 
       <div class="Showitem">
+
+        <!-- --------------------------------------Item1-------------------------------------- -->
         <div id="Item1">
           <div class="itemimg">
             <div class="Itemimg1">
@@ -465,14 +691,172 @@
               <img class="Itemimgfix" src="img/item4.png" alt="Item4">
             </div>
           </div>
-        </div>
+          <!-- --------------------------------------ItemArticle-------------------------------------- -->
 
-        <div id="Item2">
+                <article class=>
+                  <div class="left-col">
+
+                    <h3 class="itemtitle">商品標題</h3>
+
+                  <div class="description-container">
+                    <p class="product-details">asdwasdwasdwasdwasdwasd
+                      wasdwasdwasdwasdwasdwasdwasdwasd
+                      sdasdasdasdasdasdasdssssssssssss
+                      asdwasdasdasdasdasdasdasdasdasd
+
+                      <a href="#" title="readmore">
+                        <span class="readmore"></span>
+                      </a>
+                    </p>
+                  </div>
+
+                  </div>
+
+                  <div class="right-col right-col-text">
+                    <ul class="right-col-container">
+                      <li class="right-col-item">15 items</li>
+                      <li class="right-col-item">by ebaytecheditor</li>
+                      <li class="right-col-item"> <a class="linktoshop" href="#">Shop Now</a> </li>
+                    </ul>
+                  </div>
+                </article>
 
         </div>
+                <!-- --------------------------------------Item1End-------------------------------------- -->
+
+                <!-- --------------------------------------Item2-------------------------------------- -->
+
+                <div id="Item1" class="rightsection">
+                  <div class="itemimg">
+                    <div class="Itemimg1">
+                      <img id="Itemimg1-1" src="img/item5.png" alt="Item5">
+                    </div>
+                    <div class="Itemimg2">
+                      <img class="Itemimgfix" src="img/item6.png" alt="Item6">
+                      <img class="Itemimgfix" src="img/item7.png" alt="Item7">
+                      <img class="Itemimgfix" src="img/item8.png" alt="Item8">
+                    </div>
+                  </div>
+                  <!-- --------------------------------------ItemArticle-------------------------------------- -->
+
+                        <article class=>
+                          <div class="left-col">
+
+                            <h3 class="itemtitle">商品標題</h3>
+
+                          <div class="description-container">
+                            <p class="product-details">asdwasdwasdwasdwasdwasd
+                              wasdwasdwasdwasdwasdwasdwasdwasd
+                              sdasdasdasdasdasdasdssssssssssss
+                              asdwasdasdasdasdasdasdasdasdasd
+
+                              <a href="#" title="readmore">
+                                <span class="readmore"></span>
+                              </a>
+                            </p>
+                          </div>
+
+                          </div>
+
+                          <div class="right-col right-col-text">
+                            <ul class="right-col-container">
+                              <li class="right-col-item">15 items</li>
+                              <li class="right-col-item">by ebaytecheditor</li>
+                              <li class="right-col-item"> <a class="linktoshop" href="#">Shop Now</a> </li>
+                            </ul>
+                          </div>
+                        </article>
+
+                </div>
+                <!-- --------------------------------------Item2End-------------------------------------- -->
+
       </div>
     </div>
   </section>
 
+  <!-- --------------------------------------DailyDeals-------------------------------------- -->
+
+  <section id="dailydeals" class="BGColor floatfix">
+    <div class="container">
+
+      <h2 class="Item-Bigtitle">Daily Deals</h2>
+
+      <div class="box">
+
+          <div class="box-subcontent">
+            <img class="sale" src="img/sale1.png" alt="sale1">
+            <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+            <h4 class="price">TWD 0.00</h4>
+
+          </div>
+
+              <div class="box-subcontent">
+                <img class="sale" src="img/sale2.png" alt="sale2">
+                <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                <h4 class="price">TWD 0.00</h4>
+
+              </div>
+
+                <div class="box-subcontent">
+                  <img class="sale" src="img/sale3.png" alt="sale3">
+                  <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                  <h4 class="price">TWD 0.00</h4>
+
+                </div>
+
+                  <div class="box-subcontent">
+                    <img class="sale" src="img/sale4.png" alt="sale4">
+                    <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                    <h4 class="price">TWD 0.00</h4>
+
+                  </div>
+
+                    <div class="box-subcontent">
+                      <img class="sale" src="img/sale5.png" alt="sale5">
+                      <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                      <h4 class="price">TWD 0.00</h4>
+
+                    </div>
+
+                  <!-- --------------------------------------NextPage-------------------------------------- -->
+
+                  <div class="NextPage floatfix">
+
+                    <div class="NextPage-content">
+
+                      <a href="#"><</a>
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="active">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">></a>
+
+                    </div>
+                  </div>
+      </div>
+      <!-- --------------------------------------Collections-------------------------------------- -->
+      <div id="collections">
+
+        <p>Get inspired! Explore all of our <a href="#">Trending Collections</a> </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- --------------------------------------Footer-------------------------------------- -->
+  <footer>
+
+    <div class="container">
+
+      <div style="float:right">
+        <p>&copy; 2019 版權 BroYouSoEz.ga</p>
+      </div>
+
+    </div>
+
+  </footer>
 </body>
 </html>
