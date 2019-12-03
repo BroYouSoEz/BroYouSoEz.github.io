@@ -1,0 +1,862 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>ebay是什麼,能吃嗎?</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+/* --------------------------------------Header-------------------------------------- */
+    body{
+      margin: 0;
+    }
+
+    header{
+      box-shadow: 0 3px 5px #cccccc;
+      padding:8px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container{
+      width: 1300px;
+      margin: auto;
+
+
+    }
+
+    .title{
+      list-style-type: none;
+      font-size: 12px;
+      margin: 0;
+    }
+
+    li.titlelist{
+      display: inline;
+      border-right: 1px solid #777777;
+
+    }
+
+    li.titlelist a{
+      padding: 0px 9px;
+      text-decoration: none;
+      color: #333333;
+    }
+
+    li.titlelist a:hover{
+      text-decoration:underline;
+      color: #0066cc;
+    }
+
+    #signtype a{
+      padding: 0;
+      color: #0066cc;
+
+    }
+
+    #signtype a:last-child{
+      padding-right: 9px;
+    }
+
+    .right{
+      float: right;
+    }
+
+    .noborder{
+      border-right: none !important;
+    }
+
+    #shopping{
+      margin-top: -5px;
+      padding: 0 15px;
+    }
+    #bell{
+      margin-top: -5px;
+      padding: 0 15px;
+    }
+
+    /* --------------------------------------Search-------------------------------------- */
+    #SearchDiv{
+      width: 100%;
+      height: 65px;
+      overflow: hidden;
+    }
+
+    .BGColor{
+      background-color: #F9F9F9;
+    }
+
+    .floatfix{
+      clear:both;
+    }
+
+    #logo{
+      float: left;
+    }
+
+    #search-button{
+      float: left;
+      width: 70px;
+      font-size: 14px;
+      color: #555555;
+      border: none;
+      background: #F9F9F9;
+      margin-right: 15px;
+    }
+
+    #search-button:hover{
+
+      color: #0066cc;
+
+    }
+
+
+    #arrow{
+      position: relative;
+      bottom: 35px;
+      left: 40px;
+    }
+
+    #SearchForm{
+      float: left;
+      margin:10px 0 0 15px;
+
+    }
+
+    #SearchText{
+      border-radius: 3px 0 0 3px;
+
+      width: 630px;
+      height:40px;
+      box-sizing: border-box;
+
+    }
+
+    .text-style{
+
+      font-size: 16px;
+      color: #767676;
+      padding: 10px 0 9px 8px;
+      border: 1px solid #ddd;
+
+
+    }
+    #category{
+      border-radius: 0 3px 3px 0;
+      padding: 11px 10px;
+      width: 180px;
+      height:40px;
+      box-sizing: border-box;
+      background-color: #fff;
+      margin-left: -4px;
+    }
+
+    .option{
+      border: none;
+      width: 100%;
+      font-size: 12px;
+      background-color: transparent;
+    }
+
+    .submit-ptn{
+      height: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 3px;
+      border: none;
+      background: linear-gradient(to bottom,#0079bc,#00509b);
+      color: #fff;
+      padding: 8px 20px;
+    }
+
+    .submit-ptn:hover{
+      background: #00509b;
+    }
+
+    #AdSearch{
+      text-decoration: none;
+      color: #333333;
+      font-size: 13px;
+      margin-left: 10px;
+    }
+
+    #AdSearch:hover{
+      color: #0066cc;
+
+    }
+    /* --------------------------------------Menu-------------------------------------- */
+    nav{
+      width:100%;
+      height: 35px;
+
+
+      padding-top: 12px;
+    }
+
+    .up-down-border{
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #menu-ul{
+      width: 100%;
+      height: 35px;
+      box-sizing: border-box;
+      padding: 10px 0 11px 0;
+
+    }
+
+    .space{
+      float: left;
+      padding: 0 2%;
+    }
+
+    .todayborder{
+      float: left;
+      width: 1px;
+      height: 24px;
+      background-color: #ddd;
+
+      margin: -5px 20px 0 20px;
+    }
+
+    .todaystyle a{
+      font-weight: bold;
+      padding:0 0 8px 0 !important;
+      border-bottom: 2px solid #333;
+    }
+
+    .todaystyle a:hover{
+      text-decoration: none !important;
+      color: #333 !important;
+    }
+    /* --------------------------------------AD-------------------------------------- */
+    #ADsection{
+      height: 402px;
+
+      padding: 30px 0;
+    }
+
+    .adborder{
+      border: 1px solid #333;
+      box-sizing: border-box;
+
+    }
+
+    .ad1{
+      float:left;
+      height: 402px;
+    }
+
+    .ad23{
+      float:left;
+      height: 402px;
+      width: 324px;
+
+      position: relative;
+    }
+    #ad2{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    #ad3{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    /* --------------------------------------Item1-------------------------------------- */
+    #Item-section{
+      width:100%;
+      height: 647px;
+
+      padding-bottom: 75px;
+      overflow: hidden;
+    }
+
+    .Item-Bigtitle{
+      height: 45px;
+      font-weight: 400;
+      color: #555;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .Showitem{
+      width: 100%;
+      height: 602.5px;
+
+      position: relative;
+    }
+
+    #Item1{
+      width:585px;
+      height: 602.5px;
+      float: left;
+    }
+
+    .itemimg{
+      width:585px;
+      height: 420px;
+
+    }
+
+    .Itemimg1{
+      float: left;
+      width:445px;
+      height: 420px;
+
+      border-width: 1px 0 1px 1px;
+      border-color: #333;
+      border-style: solid;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    #Itemimg1-1{
+      height: 420px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .Itemimg2{
+      float: left;
+      width:140px ;
+      height: 420px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .Itemimgfix{
+
+      float: left;
+      width:140px;
+      height: 140px;
+
+      border-width: 1px 1px 0 1px;
+      border-color: #333;
+      border-style: solid;
+      box-sizing: border-box;
+    }
+
+    .Itemimgfix:last-child{
+      border-width: 1px;
+
+    }
+
+    /* --------------------------------------Item1Article-------------------------------------- */
+    article{
+
+      color: #333333;
+    }
+
+    .itemtitle{
+      font-weight: 400;
+      font-size: 26px;
+
+      margin: 18px 0 10px 0;
+    }
+
+    .description-container{
+      width: 370px;
+      height: 118px;
+    }
+
+    .product-details{
+      font-weight: 400;
+      font-size: 16px;
+
+      line-height: 1.5em;
+    }
+
+    .readmore{
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+
+      background-image: url("img/read.png");
+      background-size: cover;
+
+      vertical-align: middle;
+    }
+
+    .left-col{
+      float: left;
+      width: 440px;
+    }
+
+    .right-col{
+      float: right;
+      width: 140px;
+    }
+
+    .right-col-text{
+
+      text-align: center;
+      color: #333333;
+      font-size: 14px;
+      font-weight: bold;
+
+    }
+
+    .right-col-container{
+
+      padding-left: 8px;
+      padding-right: 8px;
+
+      margin: 0px;
+
+      list-style-type: none;
+    }
+
+    .right-col-item{
+      padding: 18px 0;
+
+      border-bottom: 1px solid #ddd;
+    }
+
+    .right-col-item:last-child{
+      border: none;
+    }
+
+    .right-col-item a:link{
+      text-decoration:none;
+      color: #0654BA;
+
+    }
+    .right-col-item a:hover{
+      text-decoration:underline;
+
+    }
+
+    /* --------------------------------------Item2-------------------------------------- */
+
+    .rightsection{
+      position: absolute;
+      right: 0;
+    }
+
+    /* --------------------------------------DailyDeals-------------------------------------- */
+    #dailydeals{
+
+      width: 100%;
+      height: 530px;
+
+      padding-bottom: 75px;
+      border-bottom: 1px solid #ddd;
+
+    }
+
+    .box{
+      width: 100%;
+      height: 300px;
+
+      padding: 25px 0 0 8px;
+
+      vertical-align: middle;
+
+      overflow: hidden;
+
+      border: 1px solid #ddd;
+      background-color: white;
+      border-radius: 2px;
+
+      margin-bottom: 80px;
+    }
+
+    .box-subcontent{
+      float: left;
+
+      width: 190px;
+      margin: 0 24px;
+    }
+
+    .sale{
+      width: 169px;
+
+      border: 1px solid #333333;
+    }
+
+    .details{
+      width: 180px;
+
+      display: inline-block;
+
+      font-size: 14px;
+      padding: 8px 0 0 8px;
+
+      color: black;
+
+      text-decoration: none;
+    }
+
+    .details:hover{
+      text-decoration: underline;
+      color: #0654BA;
+    }
+
+    .price{
+
+      padding: 8px 0 0 8px;
+      margin: 0;
+
+    }
+
+    /* --------------------------------------NextPage-------------------------------------- */
+
+    .NextPage{
+      text-align: center;
+
+    }
+
+    .NextPage-content{
+
+      padding-top: 20px;
+      display: inline-block;
+    }
+
+    .NextPage-content a{
+      color: black;
+      float: left;
+      padding: 8px 16px;
+
+      text-decoration: none;
+
+      transition: background-color 0.3s ;
+
+    }
+
+    .NextPage-content a:hover:not(.active){
+
+      background-color: #ddd;
+
+    }
+
+    .NextPage-content a.active{
+      background-color: #4caf50;
+      color: white;
+    }
+
+    /* --------------------------------------Collections-------------------------------------- */
+
+    #collections{
+      border: 1px solid #ddd;
+      background-color: white;
+      border-radius: 2px;
+      text-align: center;
+      color: #777777;
+      box-sizing: border-box;
+
+    }
+
+    #collections a{
+      color: #0754BA;
+      text-decoration: none;
+    }
+
+    #collections a:hover{
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------Footer-------------------------------------- */
+
+    footer{
+
+      color: #777777;
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+  <!-- --------------------------------------Header-------------------------------------- -->
+
+  <header>
+    <div class="container">
+      <ul class="title">
+        <li id="signtype" class="titlelist">Hi!<a href="#">Sign in</a > or <a href="#">register</a></li>
+        <li class="titlelist"><a href="#">Daily Deals</a></li>
+        <li class="titlelist"><a href="#">Sell</a></li>
+        <li class="titlelist noborder"><a href="#">Help & Contact</a></li>
+
+        <li id="shopping" class="titlelist right noborder"><img src="img/shopping.png" alt="shopping cart" title="Your shopping cart"></li>
+        <li id="bell" class="titlelist right noborder"><img src="img/bell.png" alt="alert"></li>
+        <li class="titlelist right noborder"><a href="#">My eBay</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- --------------------------------------Search-------------------------------------- -->
+
+  <div id="SearchDiv" class="floatfix BGColor">
+    <div class="container">
+      <img id="logo" src="img/ebaylogo.png" alt="eBay" height="55px">
+      <button id="search-button" type="button">
+        <p>Shop by category</p>
+        <img id="arrow" src="img/arrow.png" alt="arrow" width="20px" onmouseout="this.src='img/arrow.png'" onmouseover="this.src='img/barrow.png'">
+      </button>
+
+      <form id="SearchForm">
+        <table>
+          <tr>
+            <td>
+              <input id="SearchText" class="text-style" type="text" name="SearchText" placeholder="Search for anything">
+            </td>
+
+            <td>
+              <div id="category" class="text-style">
+                <select class="option" name="category">
+                  <option selected="selected" value="0">All Category</option>
+                  <option value="1">Antiques</option>
+                  <option value="2">Art</option>
+                  <option value="3">Baby</option>
+                  <option value="4">Books</option>
+                  <option value="5">Busuness &amp; Industrial</option>
+                  <option value="6">Cameras &amp; Photo</option>
+                  <option value="7">Cell Phones &amp; Accessories</option>
+                </select>
+              </div>
+            </td>
+
+            <td>
+              <input class="submit-ptn" type="submit" value="Search">
+            </td>
+
+            <td>
+              <a href="#" id="AdSearch" title="Advanced Search">Advanced</a>
+            </td>
+          </tr>
+        </table>
+      </form>
+
+    </div>
+  </div>
+<!-- --------------------------------------Menu-------------------------------------- -->
+  <nav class="floatfix BGColor">
+    <div class="container">
+      <ul id="menu-ul" class="title up-down-border">
+        <li class="titlelist noborder space"><a href="#">Following</a></li>
+        <li class="titlelist noborder space todaystyle"><a href="#">Today</a></li>
+        <div class="todayborder">
+        </div>
+        <li class="titlelist noborder space"><a href="#">Fashion</a></li>
+        <li class="titlelist noborder space"><a href="#">Electronics</a></li>
+        <li class="titlelist noborder space"><a href="#">Collectibles & Art</a></li>
+        <li class="titlelist noborder space"><a href="#">Home & Garden</a></li>
+        <li class="titlelist noborder space"><a href="#">Sporting Goods</a></li>
+        <li class="titlelist noborder space"><a href="#">Motors</a></li>
+        <li class="titlelist noborder space"><a href="#">Daily Deals</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- --------------------------------------AD-------------------------------------- -->
+  <section id="ADsection" class="floatfix BGColor">
+    <div class="container">
+      <div class="ad1">
+        <div>
+          <img id="ad1" class="adborder" src="img/ad1.png" alt="ad1">
+        </div>
+      </div>
+      <div class="ad23">
+        <div>
+          <img id="ad2" class="adborder" src="img/ad2.png" alt="ad2">
+        </div>
+        <div>
+          <img id="ad3" class="adborder" src="img/ad3.png" alt="ad3">
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- --------------------------------------Item-------------------------------------- -->
+  <section id="Item-section" class="floatfix BGColor">
+    <div class="container">
+
+      <h2 class="Item-Bigtitle">Today's Featured Collections</h2>
+
+      <div class="Showitem">
+
+        <!-- --------------------------------------Item1-------------------------------------- -->
+        <div id="Item1">
+          <div class="itemimg">
+            <div class="Itemimg1">
+              <img id="Itemimg1-1" src="img/item1.png" alt="Item1">
+            </div>
+            <div class="Itemimg2">
+              <img class="Itemimgfix" src="img/item2.png" alt="Item2">
+              <img class="Itemimgfix" src="img/item3.png" alt="Item3">
+              <img class="Itemimgfix" src="img/item4.png" alt="Item4">
+            </div>
+          </div>
+          <!-- --------------------------------------ItemArticle-------------------------------------- -->
+
+                <article class=>
+                  <div class="left-col">
+
+                    <h3 class="itemtitle">商品標題</h3>
+
+                  <div class="description-container">
+                    <p class="product-details">asdwasdwasdwasdwasdwasd
+                      wasdwasdwasdwasdwasdwasdwasdwasd
+                      sdasdasdasdasdasdasdssssssssssss
+                      asdwasdasdasdasdasdasdasdasdasd
+
+                      <a href="#" title="readmore">
+                        <span class="readmore"></span>
+                      </a>
+                    </p>
+                  </div>
+
+                  </div>
+
+                  <div class="right-col right-col-text">
+                    <ul class="right-col-container">
+                      <li class="right-col-item">15 items</li>
+                      <li class="right-col-item">by ebaytecheditor</li>
+                      <li class="right-col-item"> <a class="linktoshop" href="#">Shop Now</a> </li>
+                    </ul>
+                  </div>
+                </article>
+
+        </div>
+                <!-- --------------------------------------Item1End-------------------------------------- -->
+
+                <!-- --------------------------------------Item2-------------------------------------- -->
+
+                <div id="Item1" class="rightsection">
+                  <div class="itemimg">
+                    <div class="Itemimg1">
+                      <img id="Itemimg1-1" src="img/item5.png" alt="Item5">
+                    </div>
+                    <div class="Itemimg2">
+                      <img class="Itemimgfix" src="img/item6.png" alt="Item6">
+                      <img class="Itemimgfix" src="img/item7.png" alt="Item7">
+                      <img class="Itemimgfix" src="img/item8.png" alt="Item8">
+                    </div>
+                  </div>
+                  <!-- --------------------------------------ItemArticle-------------------------------------- -->
+
+                        <article class=>
+                          <div class="left-col">
+
+                            <h3 class="itemtitle">商品標題</h3>
+
+                          <div class="description-container">
+                            <p class="product-details">asdwasdwasdwasdwasdwasd
+                              wasdwasdwasdwasdwasdwasdwasdwasd
+                              sdasdasdasdasdasdasdssssssssssss
+                              asdwasdasdasdasdasdasdasdasdasd
+
+                              <a href="#" title="readmore">
+                                <span class="readmore"></span>
+                              </a>
+                            </p>
+                          </div>
+
+                          </div>
+
+                          <div class="right-col right-col-text">
+                            <ul class="right-col-container">
+                              <li class="right-col-item">15 items</li>
+                              <li class="right-col-item">by ebaytecheditor</li>
+                              <li class="right-col-item"> <a class="linktoshop" href="#">Shop Now</a> </li>
+                            </ul>
+                          </div>
+                        </article>
+
+                </div>
+                <!-- --------------------------------------Item2End-------------------------------------- -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------------------------DailyDeals-------------------------------------- -->
+
+  <section id="dailydeals" class="BGColor floatfix">
+    <div class="container">
+
+      <h2 class="Item-Bigtitle">Daily Deals</h2>
+
+      <div class="box">
+
+          <div class="box-subcontent">
+            <img class="sale" src="img/sale1.png" alt="sale1">
+            <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+            <h4 class="price">TWD 0.00</h4>
+
+          </div>
+
+              <div class="box-subcontent">
+                <img class="sale" src="img/sale2.png" alt="sale2">
+                <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                <h4 class="price">TWD 0.00</h4>
+
+              </div>
+
+                <div class="box-subcontent">
+                  <img class="sale" src="img/sale3.png" alt="sale3">
+                  <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                  <h4 class="price">TWD 0.00</h4>
+
+                </div>
+
+                  <div class="box-subcontent">
+                    <img class="sale" src="img/sale4.png" alt="sale4">
+                    <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                    <h4 class="price">TWD 0.00</h4>
+
+                  </div>
+
+                    <div class="box-subcontent">
+                      <img class="sale" src="img/sale5.png" alt="sale5">
+                      <a href="#" class="details">asdasdasdadasdasdassdasdasczxcaweqwsd</a>
+                      <h4 class="price">TWD 0.00</h4>
+
+                    </div>
+
+                  <!-- --------------------------------------NextPage-------------------------------------- -->
+
+                  <div class="NextPage floatfix">
+
+                    <div class="NextPage-content">
+
+                      <a href="#"><</a>
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#" class="active">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">></a>
+
+                    </div>
+                  </div>
+      </div>
+      <!-- --------------------------------------Collections-------------------------------------- -->
+      <div id="collections">
+
+        <p>Get inspired! Explore all of our <a href="#">Trending Collections</a> </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- --------------------------------------Footer-------------------------------------- -->
+  <footer>
+
+    <div class="container">
+
+      <div style="float:right">
+        <p>&copy; 2019 版權 BroYouSoEz.ga</p>
+      </div>
+
+    </div>
+
+  </footer>
+</body>
+</html>
