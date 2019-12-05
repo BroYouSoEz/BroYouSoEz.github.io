@@ -20,7 +20,10 @@
         if (userValue == answer) {
           alert("恭喜猜中了!");
           reset();
-        } else {
+        } else if (userValue > 10) {
+          alert("輸入的整數要是0~10之間喔!");
+          reset();
+        }else {
           alert("猜錯了");
           reset();
         }
