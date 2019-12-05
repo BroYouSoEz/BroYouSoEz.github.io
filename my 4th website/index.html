@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>JS到底是JavaScript還是小學生呢?</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript">
+
+      function reset (){
+        answer = Math.floor(Math.random()*11);
+      }
+
+      reset();
+      console.log(answer);
+
+      function send(){
+        var userValue = document.getElementById('userInput').value;
+        if (userValue == answer) {
+          alert("恭喜猜中了!");
+          reset();
+        } else {
+          alert("猜錯了");
+          reset();
+        }
+      }
+
+    </script>
+
+
+</head>
+
+<body>
+
+  <p>請猜一個0~10的整數</p>
+
+  <input id="userInput" type="text" value="請輸入">
+
+  <button id="send" onclick="send()">確認</button>
+
+
+
+</body>
+</html>
