@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>反應力?這東西能吃嗎?</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript">
+      createTarget();
+
+      var createTime = Date.now();
+      var clickTime;
+      var useTime;
+
+      function randomColor(){
+        var max = 200;
+        var min = 50;
+        var g= Math.floor(Math.random()*(max-min+1)+min);
+        var color = "rgba(255,"+g+",243,1)";
+        return color;
+      }
+
+      function Target(){
+        clickTime = Date.now();
+        // $("#target").css("display","none")
+        document.getElementById('target').style.display = "none";
+        useTime = (clickTime - createTime) / 1000;
+        document.getElementById('useTimeOutPut').innerHTML =useTime;
+        console.log(useTime);
+        createTarget();
+      }
+
+      function radiud(long){
+        var radiud;
+        if (Math.random() >= 0.5) {
+          radiud = long/2;
+          // document.getElementById('target').style.borderRadius = "70px";
+          console.log("r");
+        }else {
+          radiud = 0;
+          // document.getElementById('target').style.borderRadius = "0px";
+          console.log("nr");
+        }
+        radiud = radiud +"px";
+        document.documentElement.style.setProperty("--radius",radiud);
+
+      }
+
+      function createTarget() {
+        var time = Math.random()*3000;
+        console.log(time);
+        setTimeout(function (){
+          // if (Math.random() >= 0.5) {
+          //   document.getElementById('target').style.borderRadius = "70px";
+          // }else {
+          //   document.getElementById('target').style.borderRadius = "0px";
+          // }
+
+          var topmin = 0;
+          var topmax = window.innerHeight -300;
+          console.log(topmax);
+
+          var leftmin = 0;
+          var leftmax = window.innerWidth -140;
+
+          var dynamicBound;
+
+          if (window.innerWidth>window.innerHeight) {
+
+            dynamicBound = window.innerWidth/10;
+            console.log("Width:"+dynamicBound);
+            radiud(dynamicBound);
+
+          }else {
+
+            dynamicBound=window.innerHeight/8;
+            console.log("Height:"+dynamicBound);
+            radiud(dynamicBound);
+          }
+
+          dynamicBound = dynamicBound + "px";
+          document.documentElement.style.setProperty("--bound",dynamicBound);
+
+          var top =Math.floor(Math.random()*(topmax-topmin)+topmin);
+          var left = Math.floor(Math.random()*(leftmax-leftmin)+leftmin);
+          console.log(leftmax);
+
+          document.getElementById('target').style.top=top+"px";
+          document.getElementById('target').style.left=left+"px";
+          // $("#target").css("display","block")
+          document.getElementById('target').style.display ="block";
+          document.getElementById('target').style.backgroundColor = randomColor();
+          createTime = Date.now();
+        }, time);
+      }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+  <h1>考考你的反應</h1>
+
+  <p class="textbold">反應時間:<span id="useTimeOutPut">0</span>秒</p>
+
+  <div id="target" onclick="Target()">
+
+  </div>
+</body>
+</html>

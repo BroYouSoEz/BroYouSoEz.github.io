@@ -1,0 +1,21 @@
+  :root{
+    --bound;
+    --radius;
+  }
+
+  body{
+    background-color: rgba(255, 94, 100, 0.5);
+    color: #FF3864;
+  }
+
+  .textbold{
+    font-weight: bold;
+  }
+
+  #target{
+    width:var(--bound);
+    height:var(--bound);
+    background-color: red;
+    position: relative;
+    border-radius: var(--radius);
+  }
