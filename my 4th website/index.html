@@ -10,17 +10,21 @@
 
       function reset (){
         answer = Math.floor(Math.random()*11);
+        console.log(answer);
       }
 
       reset();
-      console.log(answer);
+      // console.log(answer);
 
       function send(){
         var userValue = document.getElementById('userInput').value;
-        if (userValue == answer) {
+        if (userValue == answer & userValue != "") {
           alert("恭喜猜中了!");
           reset();
-        } else if (userValue > 10) {
+        }else if(String(userValue).indexOf(".") > -1){  //indexof可以判斷自串內是否有指定字元如果有值為1沒有值為-1
+          alert("要輸入整數喔!");
+          reset();
+        }else if (userValue > 10 ) {
           alert("輸入的整數要是0~10之間喔!");
           reset();
         }else {
@@ -38,7 +42,7 @@
 
   <p>請猜一個0~10的整數</p>
 
-  <input id="userInput" type="text" value="請輸入">
+  <input id="userInput" type="text" value="" placeholder="請輸入">
 
   <button id="send" onclick="send()">確認</button>
 
