@@ -1,0 +1,58 @@
+body{
+    background-color:gray;
+}
+
+#container{
+    width: 600px;
+    margin: auto;
+    padding-top: 40px;
+
+    font-family: "Helvetica Neue","Helvetica" , "Arial";
+}
+
+label{
+    font-size: 1.2em;
+    width: 150px;
+
+    padding-top: 8px;
+    
+    float: left;
+}
+
+.styleForinput{
+    border-radius: 5px;
+    border: 1px solid black;
+    
+    padding-left: 20px;
+    margin-bottom: 10px;
+    
+    font-size: 1.1em;
+    width: 300px;
+    height: 40px;
+}
+
+#userGender{
+    width: 322px;
+    height: 44px;
+}
+
+#textArealabel{
+    margin-left: 200px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#textArea{
+    font-size: 1.2em;
+    padding-top: 10px;
+    width: 450px;
+    height: 100px;
+}
+
+#submitBT{
+    width: 474px;
+}
+
+#error{
+    color: red;
+}
