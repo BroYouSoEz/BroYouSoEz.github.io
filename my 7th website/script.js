@@ -1,5 +1,5 @@
 function check(event){
-    event.preventDefault();
+    // event.preventDefault();
 
     var errorLog ="";
     var name = $("#userName").val();
