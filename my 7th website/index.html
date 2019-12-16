@@ -15,28 +15,28 @@
 <body>
 
     <div id="container">
-        <form id="form" onsubmit="check(event)">
+        <form id="form" onsubmit="return check(event)">
             <label for="userName">姓 名</label>
             <input id="userName" class="styleForinput" type="text" name="name" placeholder="請輸入姓名">
-    
+
             <label for="userEmail">E-mail</label>
             <input id="userEmail" class="styleForinput" type="text" name="email" placeholder="請輸入E-mail">
-    
+
             <label for="userPassword">密 碼</label>
             <input id="userPassword" class="styleForinput" type="password" name="password" placeholder="請輸入密碼">
-    
+
             <label for="checkPassword">確認密碼</label>
             <input id="checkPassword" class="styleForinput" type="password" name="checkpassword" placeholder="請確認密碼">
-    
+
             <label for="userGender">性 別</label>
             <select id="userGender" class="styleForinput" name="gender">
                 <option value="male">男</option>
                 <option value="female">女</option>
             </select>
-            
+
             <label id="textArealabel" for="textArea">回報內容</label>
             <textarea id="textArea" class="styleForinput" name="text" cols="30" rows="10" placeholder="請輸入回報內容"></textarea>
-    
+
             <button id="submitBT" class="styleForinput" type="submit" name="submit">提 交</button>
         </form>
 
