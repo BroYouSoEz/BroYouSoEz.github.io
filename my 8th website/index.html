@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>編譯器?</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="menu">
+    <div class="menuContainer">
+      <div id="title">代碼執行器</div>
+      <button id="runCode" onclick="code()" class="button"><span>執行代碼 </span></button>
+    </div>
+  </div>
+
+  <div class="floatFix"></div>
+
+  <ul id="codeMenu">
+<!-- ------------HTML---------------- -->
+    <h3 id="html" class="tab" onclick="test(this)">HTML</h3>
+    <div id="htmlst" class="codeContainer">
+      <textarea id="html">
+
+      </textarea>
+    </div>
+<!-- ------------CSS---------------- -->
+    <h3 id="css" class="tab" onclick="test(this)">CSS</h3>
+    <div class="codeContainer">
+      <textarea id="css">
+
+      </textarea>
+    </div>
+<!-- ------------JS---------------- -->
+    <h3 id="js" class="tab" onclick="test(this)">JavaScript</h3>
+    <div class="codeContainer">
+      <textarea id="js">
+        
+      </textarea>
+    </div>
+  </ul>
+  <div class="floatFix"></div>
+  <div id="outPutContainer">
+    <h2>輸 出 結 果</h2>
+    <iframe id="outPut"></iframe>
+  </div>
+  <div id="footer"></div>
+</body>
+</html>

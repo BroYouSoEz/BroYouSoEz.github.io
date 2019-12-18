@@ -1,0 +1,146 @@
+body{
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#menu{
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    font-family: "Helvetica Neue","Helvetica" , "Arial";
+}
+
+#title{
+    color: white;
+    font-size: 2em;
+    margin-left: 720px;
+    padding-top: 11px;
+    float: left;
+}
+
+.menuContainer{
+    width: 1600px;
+    margin: auto;
+}
+
+.button{
+    float: right;
+    font-size: 25px;
+    border: none;
+    padding: 5px;
+    margin-top: 8px;
+    background-color: #FFDD40;
+    border-radius: 4px;
+
+    cursor: pointer; /*滑鼠移動道按鈕鼠標會變形*/
+
+    transition: all 0.5s;
+}
+
+.button span{
+    transition: 0.5s;
+}
+
+.button span::after{
+    content: "\00bb";
+    color: black;
+
+    position: absolute; /*absolute是相對於父的位置移動所以這邊會相對於原本的menuContainer右邊0px跟上面15px距離*/
+    top: 15px;
+    right: 0;
+
+    transition: 0.5s;
+
+    opacity: 0; /*透明度*/
+}
+
+.button:hover span{
+    position: relative;
+
+    padding-right:35px;
+}
+
+.button:hover span::after{
+
+    opacity: 1;
+    top: 0;
+    right:-20px;
+}
+
+.floatFix{
+    clear: both;
+}
+
+#codeMenu{
+    width: 100%;
+    height: 600px;
+
+    margin: 0;
+
+    background-color: #FFDD40;
+
+    overflow: hidden;
+}
+
+#codeMenu h3 ,#codeMenu div{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+#codeMenu h3{
+    background-color: #36383f;
+    width: 600px;
+    height: 40px;
+    color: white;
+    margin: 280px 0 0 -280px;
+    transform: rotate(270deg);
+}
+
+#codeMenu div{
+    width: 500px;
+    height: 600px;
+    margin: 0 5px 0 -270px;
+}
+
+textarea{
+    width: 100%;
+    height: inherit; /*inherit 會繼承父的值*/
+    background-color: inherit;
+    resize: none;
+    border: none;
+    color: #ddca7e;
+    font-size: 20px;
+}
+
+#outPutContainer{
+    width: 100%;
+    background-color: #1D1E22;
+}
+h2{
+    margin: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #36383F;
+    color: white;
+    font-family: "Helvetica Neue","Helvetica" , "Arial";
+    text-align: center;
+    font-weight: normal;
+}
+
+#outPut{
+    width: 100%;
+    border: none;
+    height: 200px;
+    background-color: white;
+}
+
+#footer{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
